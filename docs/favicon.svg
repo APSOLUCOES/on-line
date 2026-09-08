@@ -1,0 +1,38 @@
+<svg viewBox="0 0 196 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="apNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1C5588" />
+      <stop offset="100%" stopColor="#113C64" />
+    </linearGradient>
+    <linearGradient id="apCyanGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#229FA2" />
+      <stop offset="50%" stopColor="#2DB6B9" />
+      <stop offset="100%" stopColor="#3CD6DC" />
+    </linearGradient>
+  </defs>
+
+  <!-- Letter A -->
+  <path
+    d="M 24 126 L 66 32 L 78 32 L 97 74 L 88 89 L 49 98 L 41 126 Z M 69 50 L 83 74 L 56 82 Z"
+    fill="url(#apNavyGrad)"
+    fill-rule="evenodd"
+  />
+
+  <!-- Letter P: Stem + Top Bar -->
+  <path
+    d="M 103 32 L 140 32 L 140 47 L 118 47 L 118 126 L 103 126 Z"
+    fill="url(#apCyanGrad)"
+  />
+
+  <!-- Letter P: Triangular Fin -->
+  <polygon
+    points="122,103 122,126 137,126"
+    fill="url(#apCyanGrad)"
+  />
+
+  <!-- Letter P: Curved Loop + Ascending Arrow -->
+  <path
+    d="M 118 75 C 137 75 147 63 147 45 L 138 27 L 169 11 L 167 45 L 159 37 C 162 55 151 78 132 88 C 125 91 118 90 118 90 Z"
+    fill="url(#apCyanGrad)"
+  />
+</svg>

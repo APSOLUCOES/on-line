@@ -9,17 +9,16 @@
     <meta property="og:description" content="Centralize suas demandas técnicas, criativas e burocráticas com uma única agência estratégica. Fale direto com nossos especialistas no WhatsApp." />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#080D14" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Redirecionamento automático APENAS se este for o index.html não compilado servido na raiz do GitHub Pages -->
+    <!-- GITHUB_PAGES_ROOT_REDIRECT -->
     <script>
       (function() {
-        // Verifica se é o arquivo fonte bruto (com main.tsx) e se está rodando no GitHub Pages
-        var isRawSource = !!document.querySelector('script[src*="main.tsx"]');
         var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
         var pathname = window.location.pathname;
-        if (isRawSource && isGitHubPages && pathname.indexOf('/docs') === -1) {
+        if (isGitHubPages && pathname.indexOf('/docs') === -1) {
           if (!pathname.endsWith('/')) {
             pathname += '/';
           }
@@ -27,6 +26,7 @@
         }
       })();
     </script>
+    <!-- /GITHUB_PAGES_ROOT_REDIRECT -->
   </head>
   <body class="bg-[#080D14] text-slate-100 antialiased selection:bg-[#2DB6B9]/30 selection:text-[#2DB6B9] overflow-x-hidden">
     <div id="root"></div>

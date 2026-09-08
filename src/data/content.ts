@@ -1,7 +1,8 @@
 import { ServiceItem, ProcessStep, AdvantageItem, FAQItem, SEODossier } from '../types';
 
-export const WHATSAPP_PHONE = '5511999999999'; // Número comercial padrão configurável
-export const WHATSAPP_BASE_URL = 'https://wa.me/5511999999999';
+export const WHATSAPP_PHONE = '5591986177569';
+export const WHATSAPP_BASE_URL = 'https://wa.me/5591986177569';
+export const WHATSAPP_DISPLAY_PHONE = '+55 (91) 98617-7569';
 
 export const SERVICES_DATA: ServiceItem[] = [
   // 1. Audiovisual & Mídia

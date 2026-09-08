@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { WHATSAPP_BASE_URL } from '../data/content';
+import { WHATSAPP_BASE_URL, WHATSAPP_DISPLAY_PHONE } from '../data/content';
 import { MessageCircle, Mail, Clock, Shield, ArrowUp } from 'lucide-react';
 
 interface FooterProps {
@@ -90,9 +90,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDossier }) => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-[#2DB6B9] transition-colors"
+                title={`Falar no WhatsApp: ${WHATSAPP_DISPLAY_PHONE}`}
               >
                 <MessageCircle className="w-4 h-4 text-[#2DB6B9]" />
-                <span>WhatsApp Comercial Oficial</span>
+                <span>WhatsApp: {WHATSAPP_DISPLAY_PHONE}</span>
               </a>
 
               <div className="flex items-center gap-2.5 text-slate-300">

@@ -14,64 +14,57 @@ export const APLogoSymbol: React.FC<{ size?: number; className?: string }> = ({
   return (
     <svg 
       width={size} 
-      height={size} 
-      viewBox="0 0 160 140" 
+      height={(size * 142) / 196} 
+      viewBox="0 0 196 142" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       className={`shrink-0 transition-transform duration-300 hover:scale-105 ${className}`}
       aria-label="AP Soluções Logo Símbolo"
     >
       <defs>
-        {/* Glow filter for tech accents */}
-        <filter id="apGlow" x="-10%" y="-10%" width="120%" height="120%">
-          <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#2DB6B9" floodOpacity="0.25" />
+        {/* Glow filter for high-tech digital accent */}
+        <filter id="apCyanGlow" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#2DB6B9" floodOpacity="0.3" />
         </filter>
-        <linearGradient id="apPetrolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#103A60" />
-          <stop offset="100%" stopColor="#154B78" />
+        {/* Exact brand gradients */}
+        <linearGradient id="apNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#1C5588" />
+          <stop offset="100%" stopColor="#113C64" />
         </linearGradient>
-        <linearGradient id="apTurquoiseGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#24A1A4" />
+        <linearGradient id="apCyanGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#229FA2" />
           <stop offset="50%" stopColor="#2DB6B9" />
           <stop offset="100%" stopColor="#3CD6DC" />
         </linearGradient>
       </defs>
 
-      {/* Letter 'A' in Petrol Blue (#103A60) */}
-      <g id="letter-A">
-        {/* Main body of letter A with dynamic angled cuts */}
+      {/* Letter 'A' in Corporate Navy (#113C64 - #1C5588) with Transparent Inner Counter */}
+      <g id="logo-letter-A">
         <path
-          d="M 52 16 L 36 16 C 33 16 31 18 30 21 L 4 94 C 3 97 5 100 8 100 L 22 100 C 25 100 27 98 28 95 L 36 71 L 58 71 L 64 88 C 65 91 68 93 71 93 L 83 83 L 52 16 Z"
-          fill="url(#apPetrolGrad)"
-        />
-        {/* Inner triangle cutout of letter A */}
-        <path
-          d="M 46 36 L 39 58 L 54 58 Z"
-          fill="#080D14"
+          d="M 24 126 L 66 32 L 78 32 L 97 74 L 88 89 L 49 98 L 41 126 Z M 69 50 L 83 74 L 56 82 Z"
+          fill="url(#apNavyGrad)"
+          fillRule="evenodd"
         />
       </g>
 
-      {/* Letter 'P' with Ascending Growth Arrow in Vibrant Turquoise (#2DB6B9) */}
-      <g id="letter-P" filter="url(#apGlow)">
-        {/* Vertical Stem of P */}
+      {/* Letter 'P' in Vibrant Turquoise (#2DB6B9) with Ascending Growth Arrow */}
+      <g id="logo-letter-P" filter="url(#apCyanGlow)">
+        {/* Vertical Stem + Top Horizontal Bar */}
         <path
-          d="M 78 40 L 78 98 C 78 100 80 102 83 102 L 94 102 C 96 102 98 100 98 98 L 98 40 Z"
-          fill="url(#apTurquoiseGrad)"
+          d="M 103 32 L 140 32 L 140 47 L 118 47 L 118 126 L 103 126 Z"
+          fill="url(#apCyanGrad)"
         />
-        {/* Small angled notch / accent at base of P stem */}
-        <path
-          d="M 103 84 L 103 100 C 103 102 105 103 107 102 L 120 102 Z"
-          fill="url(#apTurquoiseGrad)"
+
+        {/* Bottom Right Precision Triangular Fin */}
+        <polygon
+          points="122,103 122,126 137,126"
+          fill="url(#apCyanGrad)"
         />
-        {/* The dynamic P loop flowing seamlessly into the top-right ascending arrow */}
+
+        {/* Dynamic Curved Loop & Ascending Scale Arrow Head */}
         <path
-          d="M 78 38 C 78 38 98 36 112 48 C 122 56 125 70 120 82 C 114 94 100 96 85 94 L 85 82 C 94 83 103 81 106 74 C 109 68 107 60 100 55 C 93 49 84 49 78 49 Z"
-          fill="url(#apTurquoiseGrad)"
-        />
-        {/* The Arrow Head pointing diagonally upward to the top right (growth & scale) */}
-        <path
-          d="M 116 38 L 132 10 L 104 22 L 114 27 L 98 43 L 107 52 L 123 36 L 128 46 Z"
-          fill="url(#apTurquoiseGrad)"
+          d="M 118 75 C 137 75 147 63 147 45 L 138 27 L 169 11 L 167 45 L 159 37 C 162 55 151 78 132 88 C 125 91 118 90 118 90 Z"
+          fill="url(#apCyanGrad)"
         />
       </g>
     </svg>

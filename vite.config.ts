@@ -6,15 +6,27 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     base: process.env.VITE_BASE_PATH || './',
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(),
+      tailwindcss(),
+      {
+        name: 'clean-github-pages-redirect',
+        transformIndexHtml(html: string) {
+          return html.replace(/<!-- GITHUB_PAGES_ROOT_REDIRECT -->[\s\S]*?<!-- \/GITHUB_PAGES_ROOT_REDIRECT -->\s*/, '');
+        },
+      },
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
     },
     server: {
+      port: 3000,
+      host: '0.0.0.0',
+      strictPort: true,
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
+      // Do not modify - file watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
