@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Soluções | Redirecionando...</title>
+    <script>
+      // Garante que links internos no GitHub Pages recarreguem a página principal
+      const pathSegments = window.location.pathname.split('/').filter(Boolean);
+      const repoBase = pathSegments.length > 0 ? '/' + pathSegments[0] + '/' : '/';
+      window.location.replace(repoBase);
+    </script>
+  </head>
+  <body style="background-color: #080D14; color: #2DB6B9; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <p>Carregando AP Soluções...</p>
+  </body>
+</html>
