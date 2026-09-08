@@ -12,6 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Redirecionamento automático APENAS se este for o index.html não compilado servido na raiz do GitHub Pages -->
+    <script>
+      (function() {
+        // Verifica se é o arquivo fonte bruto (com main.tsx) e se está rodando no GitHub Pages
+        var isRawSource = !!document.querySelector('script[src*="main.tsx"]');
+        var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
+        var pathname = window.location.pathname;
+        if (isRawSource && isGitHubPages && pathname.indexOf('/docs') === -1) {
+          if (!pathname.endsWith('/')) {
+            pathname += '/';
+          }
+          window.location.replace(pathname + 'docs/' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-BN89cbgA.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-i_QTaCot.css">
   </head>
