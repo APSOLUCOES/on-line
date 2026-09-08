@@ -1,0 +1,6 @@
+{
+  "name": "AP Soluções - Landing Page & Portfólio Integrado",
+  "description": "Landing Page institucional e de alta conversão para a agência AP Soluções, unificando serviços audiovisuais, design, inteligência artificial e soluções estruturais com conversão direta para WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
