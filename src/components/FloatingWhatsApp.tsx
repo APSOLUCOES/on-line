@@ -6,7 +6,7 @@ export const FloatingWhatsApp: React.FC = () => {
   const [tooltipDismissed, setTooltipDismissed] = useState(false);
 
   const customMessage = encodeURIComponent(
-    'Olá! Estou navegando na landing page da AP Soluções e gostaria de tirar uma dúvida rápida sobre um serviço.'
+    'Olá gostaria de tirar uma dúvida sobre serviços para o meu negócio.'
   );
   const whatsappUrl = `${WHATSAPP_BASE_URL}?text=${customMessage}`;
 

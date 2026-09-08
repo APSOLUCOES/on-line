@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   const primaryWhatsappUrl = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(
-    'Olá! Estava navegando na landing page da AP Soluções e gostaria de tirar uma dúvida sobre serviços para o meu negócio.'
+    'Olá gostaria de tirar uma dúvida sobre serviços para o meu negócio.'
   )}`;
 
   return (
